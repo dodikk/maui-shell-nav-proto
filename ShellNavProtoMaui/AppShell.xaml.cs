@@ -1,5 +1,7 @@
 ﻿using ShellNavProtoMaui.Views.Login;
 using ShellNavProtoMaui.Views.Tabs;
+using ShellNavProtoMaui.Views.Tabs.CoinTransaction;
+
 
 namespace ShellNavProtoMaui;
 
@@ -57,21 +59,54 @@ public partial class AppShell : Shell
         // -
 
 
-        // TODO: [alex-d] maybe just "LoginPage" instead of path with separators
+        // login pages
         // -
         Routing.RegisterRoute(
+              // TODO: [alex-d] maybe just "LoginPage" instead of path with separators
+              // -
               route: "login/WelcomePage/LoginPage"
             , type: typeof(PinCodePage)
         );
 
+
+        // TabBar pages
+        // -
         Routing.RegisterRoute(
               route: nameof(ActivityPage)
-            , type: typeof(PinCodePage)
+            , type: typeof(ActivityPage)
         );
 
         Routing.RegisterRoute(
               route: nameof(SettingsPage)
             , type: typeof(SettingsPage)
+        );
+
+
+        // Coin transaction pages
+        // -
+        Routing.RegisterRoute(
+              route: nameof(ReceiveCoinPage)
+            , type: typeof(ReceiveCoinPage)
+        );
+
+        Routing.RegisterRoute(
+              route: nameof(SendCoinPage)
+            , type: typeof(SendCoinPage)
+        );
+
+        Routing.RegisterRoute(
+              route: nameof(ConvertCoinPage)
+            , type: typeof(ConvertCoinPage)
+        );
+
+        Routing.RegisterRoute(
+              route: nameof(ConfirmTransactionPage)
+            , type: typeof(ConfirmTransactionPage)
+        );
+
+        Routing.RegisterRoute(
+              route: nameof(TransactionResultPage)
+            , type: typeof(TransactionResultPage)
         );
     }
 }

@@ -60,10 +60,12 @@
 	  <None Remove="Views\" />
 	  <None Remove="Views\Tabs\" />
 	  <None Remove="Views\Login\" />
+	  <None Remove="Views\Tabs\CoinTransaction\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
 	  <Folder Include="Views\Tabs\" />
 	  <Folder Include="Views\Login\" />
+	  <Folder Include="Views\Tabs\CoinTransaction\" />
 	</ItemGroup>
 </Project>
