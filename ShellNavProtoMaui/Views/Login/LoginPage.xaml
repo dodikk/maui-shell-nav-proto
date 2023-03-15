@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="LoginPageRoot"
+    Title="Login"
+    x:Class="ShellNavProtoMaui.Views.Login.LoginPage">
+
+    <VerticalStackLayout
+        BackgroundColor="Blue"
+        Spacing="20"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center"
+        Padding="15"
+        Margin="0">
+
+        <Label 
+            Text="Login Page"
+            FontSize="32"
+            TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            Text="Submit"
+            FontSize="24"
+            TextColor="White"
+            BorderColor="White"
+            BackgroundColor="Transparent"
+            Command="{
+                Binding
+                     Path=SubmitButtonTappedCommand
+                   , Source={x:Reference LoginPageRoot}
+            }"
+        />
+
+    </VerticalStackLayout>
+</ContentPage>

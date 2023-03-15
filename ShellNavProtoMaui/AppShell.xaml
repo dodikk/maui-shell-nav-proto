@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShellNavProtoMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShellNavProtoMaui"
+    xmlns:login="clr-namespace:ShellNavProtoMaui.Views.Login"
+    xmlns:tabs="clr-namespace:ShellNavProtoMaui.Views.Tabs"
+    Shell.FlyoutBehavior="Disabled">
+
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter
+                    Property="Shell.BackgroundColor"
+                    Value="{
+                        AppThemeBinding
+                                Dark={StaticResource DarkBackgroundColor}
+                            , Light={StaticResource LightBackgroundColor}
+                    }"
+                />
+                <Setter
+                    Property="Shell.ForegroundColor"
+                    Value="{
+                        AppThemeBinding
+                              Dark={StaticResource DarkForegroundColor}
+                            , Light={StaticResource LightForegroundColor}
+                    }"
+                />
+                <Setter
+                    Property="Shell.TitleColor"
+                    Value="{
+                        AppThemeBinding
+                              Dark={StaticResource DarkForegroundColor}
+                            , Light={StaticResource LightForegroundColor}
+                    }"
+                />
+                <Setter
+                    Property="Shell.DisabledColor"
+                    Value="#B4FFFFFF"
+                />
+                <Setter
+                    Property="Shell.UnselectedColor"
+                    Value="#95FFFFFF"
+                />
+                <Setter
+                    Property="Shell.TabBarBackgroundColor"
+                    Value="{
+                        AppThemeBinding
+                              Dark={StaticResource DarkBackgroundColor}
+                            , Light={StaticResource LightBackgroundColor}
+                    }"
+                />
+                <Setter
+                    Property="Shell.TabBarForegroundColor"
+                    Value="{
+                        AppThemeBinding
+                              Dark={StaticResource DarkForegroundColor}
+                            , Light={StaticResource LightForegroundColor}
+                    }"
+                />
+                <Setter
+                    Property="Shell.TabBarUnselectedColor"
+                    Value="{AppThemeBinding Dark=#E7E7E7, Light=#CCCCCC}"
+                />
+                <Setter
+                    Property="Shell.TabBarTitleColor"
+                    Value="{
+                        AppThemeBinding
+                              Dark={StaticResource DarkForegroundColor}
+                            , Light={StaticResource LightForegroundColor}}"
+                />
+            </Style>
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="FlyoutItem" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior TextOverride="" />
+    </Shell.BackButtonBehavior>
+
+
+<!--
+    ==== Login pages ====
+-->
+
+
+    <ShellContent
+        Title="Welcome"
+        ContentTemplate="{DataTemplate login:WelcomePage}"
+        Route="login/WelcomePage">
+        <!--
+            TODO: do we need to register a nested item here? Or code-behind is ok?
+
+            <ShellContent
+                Title="Sign-in"
+                ContentTemplate="{DataTemplate login:LoginPage}"
+                Route="login/WelcomePage/LoginPage" />
+        -->
+    </ShellContent>
+
+    <ShellContent
+        Title="Welcome"
+        ContentTemplate="{DataTemplate login:WelcomePage}"
+        Route="login/PinCodePage" />
+
+
+
+<!--
+    ==== Main app pages ====
+-->
+    <TabBar Route="Main">
+        <ShellContent
+            Title="Dashboard"
+            Route="TabDashboard"
+
+            Icon="{StaticResource CatalogIconImageSource}"
+            ContentTemplate="{DataTemplate tabs:DashboardPage}"
+        />
+
+        <ShellContent
+            Title="Wallets"
+            Route="TabWallets"
+
+            Icon="{StaticResource ProfileIconImageSource}"
+            ContentTemplate="{DataTemplate tabs:WalletsPage}"
+        />
+
+        <ShellContent
+            Title="Other"
+            Route="TabOther"
+
+            Icon="{StaticResource ProfileIconImageSource}"
+            ContentTemplate="{DataTemplate tabs:OtheresPage}"
+        />
+    </TabBar>
+
+</Shell>
+
