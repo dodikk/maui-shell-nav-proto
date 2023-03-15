@@ -102,8 +102,8 @@
     </ShellContent>
 
     <ShellContent
-        Title="Welcome"
-        ContentTemplate="{DataTemplate login:WelcomePage}"
+        Title="Pin Code"
+        ContentTemplate="{DataTemplate login:PinCodePage}"
         Route="login/PinCodePage" />
 
 
