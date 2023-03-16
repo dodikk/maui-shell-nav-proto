@@ -16,7 +16,7 @@
                     Property="Shell.BackgroundColor"
                     Value="{
                         AppThemeBinding
-                                Dark={StaticResource DarkBackgroundColor}
+                              Dark={StaticResource DarkBackgroundColor}
                             , Light={StaticResource LightBackgroundColor}
                     }"
                 />
@@ -121,26 +121,26 @@
         <ShellContent
             Title="Dashboard"
             Route="TabDashboard"
-
-            Icon="{StaticResource CatalogIconImageSource}"
             ContentTemplate="{DataTemplate tabs:DashboardPage}"
-        />
+        >
+            <!-- Icon="{StaticResource CatalogIconImageSource}" -->
+        </ShellContent>
 
         <ShellContent
             Title="Wallets"
             Route="TabWallets"
-
-            Icon="{StaticResource ProfileIconImageSource}"
             ContentTemplate="{DataTemplate tabs:WalletsPage}"
-        />
+        >
+            <!-- Icon="{StaticResource ProfileIconImageSource}" -->
+        </ShellContent>
 
         <ShellContent
             Title="Other"
-            Route="TabOther"
-
-            Icon="{StaticResource ProfileIconImageSource}"
+            Route="TabOther"   
             ContentTemplate="{DataTemplate tabs:OtheresPage}"
-        />
+        >
+            <!-- Icon="{StaticResource ProfileIconImageSource}" -->
+        </ShellContent>
     </TabBar>
 
 </Shell>
