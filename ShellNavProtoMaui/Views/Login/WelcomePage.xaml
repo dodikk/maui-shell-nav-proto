@@ -25,6 +25,7 @@
             FontSize="24"
             TextColor="Blue"
             BorderColor="Blue"
+            BorderWidth="2"
             BackgroundColor="Transparent"
             Command="{
                 Binding

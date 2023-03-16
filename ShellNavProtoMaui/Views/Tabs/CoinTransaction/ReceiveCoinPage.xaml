@@ -7,7 +7,9 @@
 
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="QR code to be here"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
