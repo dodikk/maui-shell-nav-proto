@@ -15,6 +15,15 @@ public partial class LoginPage : ContentPage
 	[RelayCommand]
     private void SubmitButtonTapped()
 	{
-        _ = Shell.Current.GoToAsync("PinCodePage");
+        //_ = Shell.Current.GoToAsync("PinCodePage");
+        //_ = Shell.Current.GoToAsync($"PinCodePage?with_top_panel={true}");
+
+        _ = Shell.Current.GoToAsync(
+              state: "PinCodePage"
+            , animate: true
+            , parameters: new Dictionary<string, object>()
+              {
+                  { "with_top_panel", true }
+              });
     }
 }

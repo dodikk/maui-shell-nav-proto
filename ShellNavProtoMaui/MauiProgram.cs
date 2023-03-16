@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using ShellNavProtoMaui.Views.Login;
+
 
 namespace ShellNavProtoMaui;
+
 
 public static class MauiProgram
 {
@@ -14,6 +17,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+
+        builder.Services.AddTransient(typeof(PinCodePage), typeof(PinCodePage));
+        builder.Services.AddTransient(typeof(PinCodePageVM), typeof(PinCodePageVM));
 
 #if DEBUG
 		builder.Logging.AddDebug();
