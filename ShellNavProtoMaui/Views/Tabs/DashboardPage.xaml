@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ShellNavProtoMaui.Views.Controls"
+    Title="Dashboard"
+    x:Class="ShellNavProtoMaui.Views.Tabs.DashboardPage"
+    x:Name="DashboardPageRoot">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Settings"
+            Clicked="ToolbarItem_Clicked"
+        >
+            <!--
+                Note: [alex-d] for some reason the command binding makes button unresponsive
+                      So that might need to be forwarded to ViewModel explicitly
+
+                Command="{
+                    Binding
+                          Source=DashboardPageRoot
+                        , Path=SettingsButtonTappedCommand
+                }"
+            -->
+
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout BackgroundColor="White" Spacing="10" Padding="10">
+
+        <controls:CoinActionsBar
+            HorizontalOptions="Fill"
+        />
+
+        <Label 
+            Text="Dashboard Page"
+            FontSize="32"
+            TextColor="Black"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
