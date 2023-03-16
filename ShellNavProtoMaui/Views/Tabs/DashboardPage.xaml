@@ -11,12 +11,20 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Text="Settings"
-            Command="{
-                Binding
-                      Source=DashboardPageRoot
-                    , Path=SettingsButtonTappedCommand
-            }"
-        />
+            Clicked="ToolbarItem_Clicked"
+        >
+            <!--
+                Note: [alex-d] for some reason the command binding makes button unresponsive
+                      So that might need to be forwarded to ViewModel explicitly
+
+                Command="{
+                    Binding
+                          Source=DashboardPageRoot
+                        , Path=SettingsButtonTappedCommand
+                }"
+            -->
+
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <VerticalStackLayout BackgroundColor="White" Spacing="10">

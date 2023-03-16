@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using System;
+using CommunityToolkit.Mvvm.Input;
 
 
 namespace ShellNavProtoMaui.Views.Tabs;
@@ -16,4 +17,9 @@ public partial class DashboardPage : ContentPage
 	{
 		_ = Shell.Current.GoToAsync("SettingsPage");
 	}
+
+    void ToolbarItem_Clicked(object sender, EventArgs e)
+    {
+		this.OnSettingsButtonTapped();
+    }
 }
