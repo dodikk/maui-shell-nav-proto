@@ -84,13 +84,19 @@
 
 <!--
     ==== Login pages ====
+
+    Note: [alex-d] the first (top-most) item will be shown by default
+          but explicit |Shell.Current.GoToAsync()| can override it
+          (during lifecycle events while app starts)
 -->
+
+
 
 
     <ShellContent
         Title="Welcome"
         ContentTemplate="{DataTemplate login:WelcomePage}"
-        Route="login/WelcomePage">
+        Route="WelcomePage">
         <!--
             TODO: do we need to register a nested item here? Or code-behind is ok?
 
@@ -104,7 +110,7 @@
     <ShellContent
         Title="Pin Code"
         ContentTemplate="{DataTemplate login:PinCodePage}"
-        Route="login/PinCodePage" />
+        Route="PinCodePage" />
 
 
 

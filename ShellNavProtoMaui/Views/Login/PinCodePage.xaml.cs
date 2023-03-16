@@ -14,5 +14,6 @@ public partial class PinCodePage : ContentPage
     [RelayCommand]
     private void SubmitButtonTapped()
     {
+        _ = Shell.Current.GoToAsync("//Main");
     }
 }

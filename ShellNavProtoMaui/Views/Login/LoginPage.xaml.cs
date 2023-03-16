@@ -15,6 +15,6 @@ public partial class LoginPage : ContentPage
 	[RelayCommand]
     private void SubmitButtonTapped()
 	{
-        _ = Shell.Current.GoToAsync("login/WelcomePage/LoginPage/PinCode");
+        _ = Shell.Current.GoToAsync("PinCodePage");
     }
 }

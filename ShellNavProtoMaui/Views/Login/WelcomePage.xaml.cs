@@ -16,6 +16,6 @@ public partial class WelcomePage : ContentPage
 	[RelayCommand]
 	private void OnLoginButtonTapped()
 	{
-		_ = Shell.Current.GoToAsync("login/WelcomePage/LoginPage");
+		_ = Shell.Current.GoToAsync("LoginPage");
 	}
 }

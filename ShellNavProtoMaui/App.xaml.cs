@@ -6,7 +6,11 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+        _appShell = new AppShell();
+        MainPage = _appShell;
+        _ = _appShell.OpenRootPageAsync();
+    }
+
+	private AppShell _appShell;
 }
 

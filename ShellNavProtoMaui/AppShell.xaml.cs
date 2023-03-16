@@ -14,35 +14,21 @@ public partial class AppShell : Shell
         InitializeComponent();
     }
 
-
-    protected override async void OnHandlerChanged()
-    {
-        // TODO: [alex-d] do we need that?
-        // -
-
-        base.OnHandlerChanged();
-
-        if (Handler is not null)
-        {
-            await OpenRootPageAsync();
-            //await _navigationService.InitializeAsync();
-        }
-    }
-
-    private async Task OpenRootPageAsync()
+    public async Task OpenRootPageAsync()
     {
         //await _navigationService.InitializeAsync();
 
-        // TODO: [alex-d] maybe replace with |//login/PinCodePage|
+        // TODO: [alex-d] maybe replace with other pages
+        // * await Shell.Current.GoToAsync("//PinCodePage");
+        // * await Shell.Current.GoToAsync("//Main");
         // -
-        await Shell.Current.GoToAsync("//login/WelcomePage");
-        // await Shell.Current.GoToAsync("//Main");
+        await Shell.Current.GoToAsync("//WelcomePage");
 
 
-        // ???
-        // await Shell.Current.GoToAsync("//login/PinCodePage");
-        // await Shell.Current.GoToAsync("//Main/TabDashboard");
 
+        // Note: [alex-d] these are same
+        // * await Shell.Current.GoToAsync("//Main");
+        // * await Shell.Current.GoToAsync("//Main/TabDashboard");
     }
 
     private static void InitializeRouting()
@@ -62,9 +48,18 @@ public partial class AppShell : Shell
         // login pages
         // -
         Routing.RegisterRoute(
-              // TODO: [alex-d] maybe just "LoginPage" instead of path with separators
+              // Note: [alex-d] a version with separators did not quite work for me
+              //       "LoginPage" instead of "/login/LoginPage" 
               // -
-              route: "login/WelcomePage/LoginPage"
+              route: nameof(LoginPage)
+            , type: typeof(LoginPage)
+        );
+
+        Routing.RegisterRoute(
+              // Note: [alex-d] without RegisterRoute() the transision does not happen
+              //       when we have only xaml entry
+              // -
+              route: nameof(PinCodePage)
             , type: typeof(PinCodePage)
         );
 
