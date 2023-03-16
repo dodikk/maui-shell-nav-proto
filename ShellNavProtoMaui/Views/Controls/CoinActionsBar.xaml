@@ -9,50 +9,48 @@
     <Grid BackgroundColor="LightGray"
           RowSpacing="0"
           ColumnSpacing="20"
-          ColumnDefinitions="*,*,*,*"
+          ColumnDefinitions="*,*,*"
           Padding="20,0"
           Margin="0">
 
-        <Button
+        <Button Grid.Column="0"
             Text="Receive"
             Command="{
                 Binding
                       Source={x:Reference CoinActionsBarRoot}
                     , Path=ReceiveButtonTappedCommand
             }"
-            FontSize="24"
+            FontSize="20"
             TextColor="White"
             BackgroundColor="Pink"
             VerticalOptions="Fill"
         />
 
-        <Button
+        <Button Grid.Column="1"
             Text="Send"
             Command="{
                 Binding
                       Source={x:Reference CoinActionsBarRoot}
                     , Path=SendButtonTappedCommand
             }"
-            FontSize="24"
+            FontSize="20"
             TextColor="White"
             BackgroundColor="Cyan"
             VerticalOptions="Fill"
         />
 
-        <Button
+        <Button Grid.Column="2"
             Text="Convert"
             Command="{
                 Binding
                       Source={x:Reference CoinActionsBarRoot}
                     , Path=ConvertButtonTappedCommand
             }"
-            FontSize="24"
+            FontSize="20"
             TextColor="White"
             BackgroundColor="LightGreen"
             VerticalOptions="Fill"
         />
-
-        </Frame>
 
     </Grid>
 

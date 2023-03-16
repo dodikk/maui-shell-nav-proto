@@ -6,8 +6,11 @@
     Title="Activity"
     x:Class="ShellNavProtoMaui.Views.Tabs.ActivityPage">
 
-    <VerticalStackLayout BackgroundColor="White">
+    <VerticalStackLayout BackgroundColor="White" Spacing="10">
 
+        <controls:CoinActionsBar
+            HorizontalOptions="Fill"
+        />
 
         <Label 
             Text="Activity Page"
