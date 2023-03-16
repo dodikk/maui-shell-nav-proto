@@ -61,11 +61,13 @@
 	  <None Remove="Views\Tabs\" />
 	  <None Remove="Views\Login\" />
 	  <None Remove="Views\Tabs\CoinTransaction\" />
+	  <None Remove="Views\Controls\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\" />
 	  <Folder Include="Views\Tabs\" />
 	  <Folder Include="Views\Login\" />
 	  <Folder Include="Views\Tabs\CoinTransaction\" />
+	  <Folder Include="Views\Controls\" />
 	</ItemGroup>
 </Project>
