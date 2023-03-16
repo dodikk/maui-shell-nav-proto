@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="CoinActionsBarRoot"
+    x:Class="ShellNavProtoMaui.Views.Controls.CoinActionsBar">
+
+
+    <Grid BackgroundColor="LightGray"
+          RowSpacing="0"
+          ColumnSpacing="15"
+          ColumnDefinitions="*,*,*"
+          Padding="15,10"
+          Margin="0">
+
+        <Button Grid.Column="0"
+            Text="Receive"
+            Command="{
+                Binding
+                      Source={x:Reference CoinActionsBarRoot}
+                    , Path=ReceiveButtonTappedCommand
+            }"
+            FontSize="20"
+            TextColor="White"
+            BackgroundColor="Pink"
+            VerticalOptions="Fill"
+            Margin="0"
+        />
+
+        <Button Grid.Column="1"
+            Text="Send"
+            Command="{
+                Binding
+                      Source={x:Reference CoinActionsBarRoot}
+                    , Path=SendButtonTappedCommand
+            }"
+            FontSize="20"
+            TextColor="White"
+            BackgroundColor="Cyan"
+            VerticalOptions="Fill"
+            Margin="0"
+        />
+
+        <Button Grid.Column="2"
+            Text="Convert"
+            Command="{
+                Binding
+                      Source={x:Reference CoinActionsBarRoot}
+                    , Path=ConvertButtonTappedCommand
+            }"
+            FontSize="20"
+            TextColor="White"
+            BackgroundColor="LightGreen"
+            VerticalOptions="Fill"
+            Margin="0"
+        />
+
+    </Grid>
+
+</ContentView>
+
