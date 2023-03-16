@@ -1,4 +1,8 @@
-﻿namespace ShellNavProtoMaui.Views.Tabs.CoinTransaction;
+﻿using CommunityToolkit.Mvvm.Input;
+
+
+namespace ShellNavProtoMaui.Views.Tabs.CoinTransaction;
+
 
 public partial class ConfirmTransactionPage : ContentPage
 {
@@ -6,4 +10,10 @@ public partial class ConfirmTransactionPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    [RelayCommand]
+    private void SubmitButtonTapped()
+    {
+        _ = Shell.Current.GoToAsync("TransactionResultPage");
+    }
 }

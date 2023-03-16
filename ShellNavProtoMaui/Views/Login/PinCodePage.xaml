@@ -2,10 +2,10 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Name="PinCodePageRoot"
     Shell.NavBarIsVisible="{Binding ShouldDisplayTopToolbar}"
     Title="Enter your pin"
-    x:Class="ShellNavProtoMaui.Views.Login.PinCodePage">
+    x:Class="ShellNavProtoMaui.Views.Login.PinCodePage"
+    x:Name="PinCodePageRoot">
 
 
     <VerticalStackLayout

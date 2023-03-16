@@ -2,14 +2,33 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Success!"
     x:Class="ShellNavProtoMaui.Views.Tabs.CoinTransaction.TransactionResultPage"
-    Title="TransactionResultPage">
+    x:Name="TxResultPageRoot">
 
 
-    <VerticalStackLayout>
+    <VerticalStackLayout BackgroundColor="LightGreen">
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Transaction is Completed Successfully"
+            LineBreakMode="WordWrap"
+            HorizontalTextAlignment="Center"
+            TextColor="White"
+            FontSize="30"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Button
+            Text="Dismiss"
+            FontSize="24"
+            TextColor="White"
+            BorderColor="White"
+            BackgroundColor="Transparent"
+            Command="{
+                Binding
+                     Path=SubmitButtonTappedCommand
+                   , Source={x:Reference TxResultPageRoot}
+            }"
+        />
+
     </VerticalStackLayout>
 </ContentPage>

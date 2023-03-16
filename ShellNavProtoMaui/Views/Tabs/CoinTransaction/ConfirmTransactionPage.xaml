@@ -2,14 +2,34 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Confirm"
     x:Class="ShellNavProtoMaui.Views.Tabs.CoinTransaction.ConfirmTransactionPage"
-    Title="ConfirmTransactionPage">
+    x:Name="ConfirmTxPageRoot">
 
 
-    <VerticalStackLayout>
+    <VerticalStackLayout BackgroundColor="Pink">
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Enter 2fa code to confirm the transaction"
+            LineBreakMode="WordWrap"
+            HorizontalTextAlignment="Center"
+            TextColor="White"
+            FontSize="30"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+
+        <Button
+            Text="Submit"
+            FontSize="24"
+            TextColor="White"
+            BorderColor="White"
+            BackgroundColor="Transparent"
+            Command="{
+                Binding
+                     Path=SubmitButtonTappedCommand
+                   , Source={x:Reference ConfirmTxPageRoot}
+            }"
+        />
+
     </VerticalStackLayout>
 </ContentPage>

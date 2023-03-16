@@ -2,13 +2,32 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Send"
     x:Class="ShellNavProtoMaui.Views.Tabs.CoinTransaction.SendCoinPage"
-    Title="SendCoinPage">
+    x:Name="SendCoinsPageRoot">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout BackgroundColor="Cyan">
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Submit coin amount and destination address"
+            LineBreakMode="WordWrap"
+            HorizontalTextAlignment="Center"
+            TextColor="White"
+            FontSize="30"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Button
+            Text="Submit"
+            FontSize="24"
+            TextColor="White"
+            BorderColor="White"
+            BackgroundColor="Transparent"
+            Command="{
+                Binding
+                     Path=SubmitButtonTappedCommand
+                   , Source={x:Reference SendCoinsPageRoot}
+            }"
+        />
+
     </VerticalStackLayout>
 </ContentPage>

@@ -22,8 +22,8 @@ public partial class AppShell : Shell
         // * await Shell.Current.GoToAsync("//PinCodePage");
         // * await Shell.Current.GoToAsync("//Main");
         // -
-        //await Shell.Current.GoToAsync("//WelcomePage");
-        await Shell.Current.GoToAsync("//PinCodePage");
+        await Shell.Current.GoToAsync("//WelcomePage");
+        //await Shell.Current.GoToAsync("//PinCodePage");
         //await Shell.Current.GoToAsync("//Main");
 
 
