@@ -7,7 +7,7 @@
     x:Name="ConvertCoinsPageRoot">
 
 
-    <VerticalStackLayout BackgroundColor="Blue">
+    <VerticalStackLayout BackgroundColor="Blue" Padding="10">
         <Label 
             Text="Submit coin amount and destination coin wallet"
             LineBreakMode="WordWrap"
@@ -22,6 +22,7 @@
             FontSize="24"
             TextColor="White"
             BorderColor="White"
+            BorderWidth="2"
             BackgroundColor="Transparent"
             Command="{
                 Binding

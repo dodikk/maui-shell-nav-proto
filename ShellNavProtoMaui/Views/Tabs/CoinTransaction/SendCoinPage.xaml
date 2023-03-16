@@ -6,7 +6,7 @@
     x:Class="ShellNavProtoMaui.Views.Tabs.CoinTransaction.SendCoinPage"
     x:Name="SendCoinsPageRoot">
 
-    <VerticalStackLayout BackgroundColor="Cyan">
+    <VerticalStackLayout BackgroundColor="Cyan" Padding="10">
         <Label 
             Text="Submit coin amount and destination address"
             LineBreakMode="WordWrap"
@@ -21,6 +21,7 @@
             FontSize="24"
             TextColor="White"
             BorderColor="White"
+            BorderWidth="2"
             BackgroundColor="Transparent"
             Command="{
                 Binding

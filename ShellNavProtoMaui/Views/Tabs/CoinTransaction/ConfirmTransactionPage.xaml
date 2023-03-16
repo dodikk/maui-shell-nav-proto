@@ -7,7 +7,7 @@
     x:Name="ConfirmTxPageRoot">
 
 
-    <VerticalStackLayout BackgroundColor="Pink">
+    <VerticalStackLayout BackgroundColor="Pink" Padding="10">
         <Label 
             Text="Enter 2fa code to confirm the transaction"
             LineBreakMode="WordWrap"
@@ -23,6 +23,7 @@
             FontSize="24"
             TextColor="White"
             BorderColor="White"
+            BorderWidth="2"
             BackgroundColor="Transparent"
             Command="{
                 Binding

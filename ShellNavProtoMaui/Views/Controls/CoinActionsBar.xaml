@@ -8,9 +8,9 @@
 
     <Grid BackgroundColor="LightGray"
           RowSpacing="0"
-          ColumnSpacing="20"
+          ColumnSpacing="15"
           ColumnDefinitions="*,*,*"
-          Padding="20,0"
+          Padding="15,10"
           Margin="0">
 
         <Button Grid.Column="0"
@@ -24,6 +24,7 @@
             TextColor="White"
             BackgroundColor="Pink"
             VerticalOptions="Fill"
+            Margin="0"
         />
 
         <Button Grid.Column="1"
@@ -37,6 +38,7 @@
             TextColor="White"
             BackgroundColor="Cyan"
             VerticalOptions="Fill"
+            Margin="0"
         />
 
         <Button Grid.Column="2"
@@ -50,6 +52,7 @@
             TextColor="White"
             BackgroundColor="LightGreen"
             VerticalOptions="Fill"
+            Margin="0"
         />
 
     </Grid>

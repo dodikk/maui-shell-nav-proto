@@ -5,7 +5,7 @@
     x:Class="ShellNavProtoMaui.Views.Tabs.CoinTransaction.ReceiveCoinPage"
     Title="ReceiveCoinPage">
 
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="10">
         <Label 
             Text="QR code to be here"
             FontSize="30"

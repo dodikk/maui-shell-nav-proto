@@ -27,7 +27,7 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <VerticalStackLayout BackgroundColor="White" Spacing="10">
+    <VerticalStackLayout BackgroundColor="White" Spacing="10" Padding="10">
 
         <controls:CoinActionsBar
             HorizontalOptions="Fill"
